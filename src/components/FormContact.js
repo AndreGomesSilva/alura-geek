@@ -1,0 +1,42 @@
+import React from 'react';
+import '../style/form.css'
+
+export default class FormContact extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            name: '',
+            message: '',
+        };
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
+    handleChange(event) {
+        const value = event.target.value;
+
+        this.setState({
+            ...this.state,
+            [event.target.name]: value
+        });
+    }
+
+    handleSubmit(event) {
+        alert('Sua Mensagem foi enviada. Obrigado: ' +  this.state.name)
+        event.preventDefault();
+    }
+
+    render() {
+        return (
+            <form className='contact__form' onSubmit={this.handleSubmit}>
+                <h2 className='contact__form__title'>Fale conosco</h2>
+
+                <div className='full__input'>
+                <label for='name'>Nome</label>
+                <input className='contact__form__name' type="text" name='name' value={this.state.name} onChange={this.handleChange} />
+                </div>
+                <textarea className='contact__form__message' placeholder='Escreva sua mensagem' name='message' value={this.state.message} onChange={this.handleChange} />
+                <input className='contact__form__submit' type="submit" value="Enviar mensagem" />
+            </form>
+        );
+    }
+}

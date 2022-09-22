@@ -1,0 +1,77 @@
+.conteudo{
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    width: 1136px;
+    
+}
+
+.lista__produto {
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    gap: 16px;
+}
+
+.lista__produto__cabecalho {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+}
+
+.lista__produto__botao {
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: #2A7AE4;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.produto__container {
+    display: grid;
+    grid-template-columns: repeat(6, auto [col-start]);
+    justify-items: center;
+    gap: 16px;
+}
+
+.produto {
+    text-align: left;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    gap: 8px;
+}
+
+.produto__image {
+    height:176px;
+    width:174px;
+    
+}
+
+.produto__name {
+    font-style: medium;
+    font-size: 14px;
+    line-height: 16px;
+    margin: 0;
+}
+
+.produto__price {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 16px;
+    margin: 0;
+}
+.produto__botao_ver {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    color: #2A7AE4;
+    cursor: pointer;
+}
