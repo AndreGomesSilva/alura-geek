@@ -1,9 +1,10 @@
-#root{
+#root {
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
 }
+
 .app__container {
     font-family: 'Raleway', sans-serif;
     display: flex;
@@ -20,10 +21,10 @@
     flex-direction: column;
     padding: 0px;
     width: 100%;
-    background:  #FFFFFF;
+    background: #FFFFFF;
 }
 
-.topo{
+.topo {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -54,7 +55,7 @@
     gap: 10px;
 }
 
-.botao__login {
+.cabecalho__botao__login {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -73,9 +74,8 @@
 
 .hero {
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 41.15%, rgba(0, 0, 0, 0.8) 100%), url("./assets/img/header/banner-image.png");
-    background-position: center;
+    background-position: bottom;
     background-repeat: no-repeat;
-    background-size:cover;
     display: flex;
     flex-direction: column;
     padding: 32px 152px;
@@ -89,12 +89,12 @@
 .hero__texto {
     display: flex;
     flex-direction: column;
-    align-items:flex-start;
+    align-items: flex-start;
     gap: 16px;
     color: #FFFFFF;
 }
 
-.titulo__hero {
+.hero__texto__titulo {
     font-style: normal;
     font-weight: 700;
     font-size: 52px;
@@ -102,7 +102,7 @@
     margin: 0;
 }
 
-.subtitulo__hero {
+.hero__texto__subtitulo {
     font-style: normal;
     font-weight: 700;
     font-size: 22px;
@@ -111,7 +111,7 @@
     color: #FFFFFF;
 }
 
-.botao__hero {
+.hero__texto__botao {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -124,4 +124,50 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 19px;
+}
+
+@media only screen and (max-width: 1260px) {
+    .app__container {
+        width: 768px;
+    }
+
+    .topo__cabecalho {
+        width: 768px;
+        height: 72px;
+        padding: 0 32px;
+        justify-content: space-evenly;
+    }
+
+    .cabecalho__direita {
+        gap: 0px;
+
+    }
+
+    .cabecalho__direita img {
+        gap: 8px;
+        width: auto;
+        height: auto;
+    }
+
+    .cabecalho__botao {
+        padding: 0px;
+        gap: 0px;
+    }
+
+    .cabecalho__botao__login {
+        padding: 12px 16px;
+        gap: 10px;
+        width: 166px;
+        height: 40px;
+    }
+
+
+    .hero {
+        width: 768px;
+        padding: 32px 0px;
+    }
+
+    .hero__texto {
+        padding: 0 32px;
+    }
 }

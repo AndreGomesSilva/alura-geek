@@ -75,3 +75,21 @@
     color: #2A7AE4;
     cursor: pointer;
 }
+
+@media only screen and (max-width: 1260px) {
+    .conteudo{
+        width: 768px;       
+    }
+    
+    .lista__produto {
+        padding: 0px 32px;
+        gap: 16px;
+    }
+    
+    .produto__image {
+        width: 164px;
+        height: 174px;
+        
+    }    
+  
+}

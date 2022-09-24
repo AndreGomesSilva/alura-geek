@@ -23,6 +23,11 @@ export default class FormContact extends React.Component {
     handleSubmit(event) {
         alert('Sua Mensagem foi enviada. Obrigado: ' +  this.state.name)
         event.preventDefault();
+        this.setState({
+            name: '',
+            message: ''
+        });    
+    
     }
 
     render() {
@@ -34,7 +39,7 @@ export default class FormContact extends React.Component {
                 <label for='name'>Nome</label>
                 <input className='contact__form__name' type="text" name='name' value={this.state.name} onChange={this.handleChange} />
                 </div>
-                <textarea className='contact__form__message' placeholder='Escreva sua mensagem' name='message' value={this.state.message} onChange={this.handleChange} />
+                <textarea className='contact__form__message' rows={5} placeholder='Escreva sua mensagem' name='message' value={this.state.message} onChange={this.handleChange} />
                 <input className='contact__form__submit' type="submit" value="Enviar mensagem" />
             </form>
         );
