@@ -106,3 +106,30 @@ label {
     }
 
 }
+
+@media only screen and (max-width: 1260px) {
+    .contact__form {
+        width: 328px;
+        height: 229px;
+    }
+
+    .full__input {
+        width: 328px;
+        height: 56px;
+        border-radius: 4px;
+    }
+
+    .contact__form__message {
+        width: 328px;
+        height: 82px;
+        border-radius: 4px;
+    }
+
+
+    .contact__form__submit {
+        padding: 12px 16px;
+        width: 151px;
+        height: 40px;
+    }
+
+}

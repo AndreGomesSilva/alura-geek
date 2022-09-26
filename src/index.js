@@ -47,7 +47,7 @@ function Header(props) {
                 <div className="topo__cabecalho">
                     <div className="cabecalho__direita">
                         <img src={headerData.logo} alt="logo AluraGeek" />
-                        <img src={headerData.BarraDePesquisa} alt="Barra de pesquisa" />
+                        <img className='cabecalho__barra__pesquisa' src={headerData.BarraDePesquisa} alt="Barra de pesquisa" />
                     </div>
                     <div className="cabecalho__botao">
                         <button className="cabecalho__botao__login">Login</button>
@@ -82,11 +82,10 @@ function Produto(props) {
 //Retorna a lista de produtos
 function Content(props) {
     const size = useWindowSize();
-    const largeScreen = size.width > 1260 ? true : false;
-    const mediumScreen = size.width > 768 ? true : false;
-    const smallScreen = size.width < 768 ? true : false;
+    const desktopScreen = size.width > 1260 ? true : false;
+    const mobilecreen = size.width <= 1260 ? true : false;
 
-    const numberOfItem = largeScreen ? 6 : mediumScreen ? 4 : smallScreen ? 2 : 0;
+    const numberOfItem = desktopScreen ? 6 : mobilecreen ? 4 : 0;
 
     const produtosLista1 = [];
     const produtosLista2 = [];
