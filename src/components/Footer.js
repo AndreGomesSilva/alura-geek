@@ -16,24 +16,24 @@ export default function Footer(props) {
                 <div className='footer__contact'>
                     <div className='footer__contact__guia'>
                         <img src={footerData.logo} alt="logo AluraGeek" />
-                        <ul className='footer__list__as'>
+                        <ul className='footer__list__links'>
                             <li>
-                                <a className='footer__a'>Quem somos nós</a>
+                                <a className='footer__link'>Quem somos nós</a>
                             </li>
                             <li>
-                                <a className='footer__a'>Política de privacidade</a>
+                                <a className='footer__link'>Política de privacidade</a>
                             </li>
                             <li>
-                                <a className='footer__a'>Programa fidelidade</a>
+                                <a className='footer__link'>Programa fidelidade</a>
                             </li>
                             <li>
-                                <a className='footer__a'>Nossas lojas</a>
+                                <a className='footer__link'>Nossas lojas</a>
                             </li>
                             <li>
-                                <a className='footer__a'>Quero ser franqueado</a>
+                                <a className='footer__link'>Quero ser franqueado</a>
                             </li>
                             <li>
-                                <a className='footer__a'>Anuncie aqui</a>
+                                <a className='footer__link'>Anuncie aqui</a>
                             </li>
                         </ul>
                     </div>
