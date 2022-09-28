@@ -1,0 +1,121 @@
+.login {
+    font-family: 'Raleway';
+    height: 474px;
+    display: flex;
+    align-items: center;
+}
+
+.login__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.login__form__title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+
+    /* Preto/100% */
+    color: #464646;
+    margin: 0;
+}
+
+.login__form__input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.login__input__email {
+    width: 423px;
+    height: 63.13px;
+    left: calc(50% - 423px/2 - 0.5px);
+    top: 259.89px;
+    border: none;
+    border-bottom: 1px solid #D8D8D8;
+    /* Preto/branco */
+    background: #FFFFFF;
+    border-radius: 4px;
+    padding: 0 16px;
+    -webkit-box-sizing: border-box;
+    /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;
+    /* Firefox, other Gecko */
+    box-sizing: border-box;
+    /* Opera/IE 8+ */
+}
+
+.login__input__password {
+    width: 423px;
+    height: 63px;
+    border: none;
+    border-bottom: 1px solid #D8D8D8;
+    background: #FFFFFF;
+    border-radius: 4px;
+    padding: 0 16px;
+    -webkit-box-sizing: border-box;
+    /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;
+    /* Firefox, other Gecko */
+    box-sizing: border-box;
+    /* Opera/IE 8+ */
+}
+
+.login__input__submit {
+    cursor: pointer;
+    border: none;
+    width: 423px;
+    height: 62px;
+    color: #FFFFFF;
+    background: #2A7AE4;
+}
+
+@media only screen and (max-width: 1260px) {
+    .login__form__title {
+        font-size: 16px;
+        line-height: 19px;
+    }
+
+    .login__input__email {
+        width: 275px;
+        height: 41px;
+    }
+
+    .login__input__password {
+        width: 275px;
+        height: 41px;
+    }
+
+    .login__input__submit {
+        width: 109px;
+        height: 40px;
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+
+    .login__form__title {
+        font-size: 16px;
+        line-height: 19px;
+    }
+
+    .login__input__email {
+        width: 275px;
+        height: 41px;
+    }
+
+    .login__input__password {
+        width: 275px;
+        height: 41px;
+    }
+
+    .login__input__submit {
+        width: 109px;
+        height: 40px;
+    }
+}

@@ -3,7 +3,7 @@ class ProductFactory {
         this.nome = nome;
         this.preco = preco;
         this.img = img;
-}
+    }
 }
 
 

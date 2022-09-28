@@ -21,7 +21,7 @@ export default class FormContact extends React.Component {
     }
 
     handleSubmit(event) {
-        alert('Sua Mensagem foi enviada. Obrigado: ' +  this.state.name)
+        alert('Sua mensagem foi enviada. Obrigado: ' +  this.state.name)
         event.preventDefault();
         this.setState({
             name: '',
@@ -34,7 +34,6 @@ export default class FormContact extends React.Component {
         return (
             <form className='contact__form' onSubmit={this.handleSubmit}>
                 <h2 className='contact__form__title'>Fale conosco</h2>
-
                 <div className='full__input'>
                 <label for='name'>Nome</label>
                 <input className='contact__form__name' type="text" name='name' value={this.state.name} onChange={this.handleChange} />

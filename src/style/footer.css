@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0px;
+    padding: 64px 0 0 0;
     width: 100%;
 
 }
@@ -81,12 +81,10 @@
         width: 768px;
         height: 364px;
         background: #EAF2FD;
-
+        padding: 0;
     }
 
-    .footer__contact {
-        gap: 64px;
-    }
+    
 
     .footer__contact__guia {
         display: flex;
@@ -107,7 +105,9 @@
 
 @media only screen and (max-width: 768px) {
 
-
+    .footer{
+        padding: 0px;
+    }
 
     .footer__container {
         flex-direction: column;

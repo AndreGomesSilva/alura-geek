@@ -16,6 +16,8 @@
     width: 560px;
     height: 40px;
     border-radius: 4px;
+    border: none;
+    border-bottom: 1px solid #D8D8D8;
 }
 
 
@@ -28,6 +30,7 @@
 }
 
 .contact__form__name {
+    width: 100%;
     background: #FFFFFF;
     border-radius: 4px;
     color: #464646;
@@ -38,10 +41,17 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 20px;
+    padding: 0 16px;
+    -webkit-box-sizing: border-box;
+    /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;
+    /* Firefox, other Gecko */
+    box-sizing: border-box;
+    /* Opera/IE 8+ */
 }
 
 .contact__form__message {
-    width: 560px;
+    width: 565px;
     height: 82px;
     background: #FFFFFF;
     color: #464646;
@@ -55,9 +65,18 @@
     font-size: 16px;
     line-height: 20px;
     border-radius: 4px;
+    border-bottom: 1px solid #D8D8D8;
+    padding:16px;
+    -webkit-box-sizing: border-box;
+    /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;
+    /* Firefox, other Gecko */
+    box-sizing: border-box;
+    /* Opera/IE 8+ */
 }
 
 .contact__form__submit {
+    cursor: pointer;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -72,6 +91,7 @@
 }
 
 label {
+    padding: 0 8px;
     color: #A2A2A2;
     display: block;
     font-style: normal;
@@ -93,7 +113,7 @@ label {
     }
 
     .contact__form__message {
-        width: 434px;
+        width: 440px;
         height: 82px;
         border-radius: 4px;
     }
@@ -107,7 +127,7 @@ label {
 
 }
 
-@media only screen and (max-width: 1260px) {
+@media only screen and (max-width: 768px) {
     .contact__form {
         width: 328px;
         height: 229px;
@@ -120,7 +140,7 @@ label {
     }
 
     .contact__form__message {
-        width: 328px;
+        width: 334px;
         height: 82px;
         border-radius: 4px;
     }

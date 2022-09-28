@@ -2,8 +2,6 @@ import React from 'react';
 import useWindowSize from './WindowSize';
 
 
-
-
 //retorna um elemento que representa o produto Card
 function ProdutoCard(props) {
     return (

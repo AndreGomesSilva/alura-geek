@@ -1,7 +1,62 @@
+.hero {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 41.15%, rgba(0, 0, 0, 0.8) 100%), url("../assets/img/header/banner-image.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    padding: 32px 152px;
+    gap: 16px;
+    width: 1134px;
+    align-self: center;
+    height: 292px;
+    justify-content: end;
+}
+
+.hero__texto {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    color: #FFFFFF;
+}
+
+.hero__texto__titulo {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 52px;
+    line-height: 61px;
+    margin: 0;
+}
+
+.hero__texto__subtitulo {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 26px;
+    margin: 0;
+    color: #FFFFFF;
+}
+
+.hero__texto__botao {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    gap: 10px;
+    background: #2A7AE4;
+    border: none;
+    color: white;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+
 .conteudo {
     display: flex;
     flex-direction: column;
-    gap: 64px;
+    gap: 32px;
     width: 1136px;
 
 }
@@ -37,6 +92,7 @@
     grid-template-columns: repeat(6, auto [col-start]);
     justify-items: center;
     gap: 16px;
+    padding: 0 0 32px 0;
 }
 
 .produto {
@@ -78,6 +134,16 @@
 }
 
 @media only screen and (max-width: 1260px) {
+    .hero {
+        width: 768px;
+        padding: 32px 0px;
+    }
+
+    .hero__texto {
+        padding: 0 32px;
+    }
+    
+    
     .conteudo {
         width: 768px;
         gap: 16px;
@@ -97,6 +163,44 @@
 }
 
 @media only screen and (max-width: 768px) {
+    .hero {
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(180deg, rgba(0, 0, 0, 0) 41.15%, rgba(0, 0, 0, 0.8) 100%), url("../assets/img/header/banner-image.png");
+        background-position: center;
+        gap: 16px;
+        width: 360px;
+        height: 192px;
+        padding: 16px 0;
+    }
+
+    .hero__texto {
+        gap: 8px;
+        width: 328px;
+        height: 98px;
+    }
+
+
+    .hero__texto__titulo {
+        font-size: 22px;
+        line-height: 26px;
+    }
+
+    .hero__texto__subtitulo {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 16px;
+    }
+
+    .hero__texto__botao {
+        padding: 12px 16px;
+        gap: 10px;
+        width: 119px;
+        height: 40px;
+        font-size: 14px;
+        line-height: 16px;
+    }
+    
+    
+    
     .conteudo {
         width: 360px;
     }
