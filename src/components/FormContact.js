@@ -36,7 +36,7 @@ export default class FormContact extends React.Component {
                 <h2 className='contact__form__title'>Fale conosco</h2>
                 <div className='full__input'>
                 <label for='name'>Nome</label>
-                <input className='contact__form__name' type="text" name='name' value={this.state.name} onChange={this.handleChange} />
+                <input className='contact__form__name' type="text" name='name' value={this.state.name} onChange={this.handleChange}/>
                 </div>
                 <textarea className='contact__form__message' rows={5} placeholder='Escreva sua mensagem' name='message' value={this.state.message} onChange={this.handleChange} />
                 <input className='contact__form__submit' type="submit" value="Enviar mensagem" />

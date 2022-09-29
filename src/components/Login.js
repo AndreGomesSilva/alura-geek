@@ -38,8 +38,8 @@ export default class Login extends React.Component {
                 <form className='login__form' onSubmit={this.handleSubmit}>
                     <h2 className='login__form__title'>Iniciar Sessão</h2>
                     <div className='login__form__input'>
-                        <input className='login__input__email' name='email' /*type='email*/ type='text' placeholder='     Escreva seu email' value={this.state.email} onChange={this.handleChange}></input>
-                        <input className='login__input__password' name='password' /*type='password'*/ type='text' placeholder='     Escreva sua senha'value={this.state.password} onChange={this.handleChange}></input>
+                        <input className='login__input__email' name='email' /*type='email*/ type='text' placeholder='     Escreva seu email' value={this.state.email} onChange={this.handleChange}/>
+                        <input className='login__input__password' name='password' /*type='password'*/ type='text' placeholder='     Escreva sua senha'value={this.state.password} onChange={this.handleChange}/>
                     </div>    
                     <div className='login__form__submit'>
                         <input className='login__input__submit' name='submit'  type='submit' value='Logar'></input>
@@ -47,10 +47,6 @@ export default class Login extends React.Component {
                 </form>
             </div>
         )}
-
-
-
-
 
 
 }

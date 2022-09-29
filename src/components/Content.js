@@ -2,7 +2,7 @@ import React from 'react';
 import '../style/content.css';
 import '../index.css';
 import { productSet } from './ProductFactory';
-import CreatProductList from './AddProduct';
+import CreatProductList from './CreatProductList';
 
 
 const productData = [productSet.produtosLista1, productSet.produtosLista2, productSet.produtosLista3]

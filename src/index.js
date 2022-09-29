@@ -6,7 +6,7 @@ import Content from './components/Content';
 import Footer from './components/Footer';
 import Login from './components/Login';
 import './index.css';
-
+import Factory from './components/testProduct';
 
 //componente Principal
 function App(props) {
@@ -19,6 +19,7 @@ function App(props) {
                 <Route exact path='/Login' element={<Login />}/>
                 </Routes>
                 <Footer />
+                <Factory />
             </div>
         </BrowserRouter> 
     );
