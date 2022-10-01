@@ -16,7 +16,7 @@ const headerData = {
 //retorna cabeçalho
 export default function Header() {
     const location = useLocation();
-    const isHomePage = location.pathname.endsWith('/');
+    const isHomePage = location.pathname.match(/^\/$/);
     return (
         <header className='header'>
             <div className="topo">

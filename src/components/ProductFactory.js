@@ -1,39 +1,127 @@
-export default class ProductFactory {
-    constructor(nome, preco, img) {
-        this.nome = nome;
-        this.preco = preco;
-        this.img = img;
+import React from "react";
+import { v4 as uuidv4 } from 'uuid';
+
+
+
+
+
+
+
+const productList1 = [
+    { name: "ProdutoXYZ", price: 60.00, image: require('../assets/img/img_produtos/starwars/produto-1.jpg'), category: 'starwars' },
+    { name: "ProdutoXYZ", price: 60.00, image: require('../assets/img/img_produtos/starwars/produto-2.jpg'), category: 'starwars' },
+    { name: "ProdutoXYZ", price: 60.00, image: require('../assets/img/img_produtos/starwars/produto-3.jpg'), category: 'starwars' },
+    { name: "ProdutoXYZ", price: 60.00, image: require('../assets/img/img_produtos/starwars/produto-4.jpg'), category: 'starwars' },
+    { name: "ProdutoXYZ", price: 60.00, image: require('../assets/img/img_produtos/starwars/produto-5.jpg'), category: 'starwars' },
+    { name: "ProdutoXYZ", price: 60.00, image: require('../assets/img/img_produtos/starwars/produto-6.jpg'), category: 'starwars' },
+]
+const productList2 = [
+    { name: "ProdutoXYZ", price: 60.00, image: require('../assets/img/img_produtos/consoles/produto-1.jpg'), category: 'consoles' },
+    { name: "ProdutoXYZ", price: 60.00, image: require('../assets/img/img_produtos/consoles/produto-2.jpg'), category: 'consoles' },
+    { name: "ProdutoXYZ", price: 60.00, image: require('../assets/img/img_produtos/consoles/produto-3.jpg'), category: 'consoles' },
+    { name: "ProdutoXYZ", price: 60.00, image: require('../assets/img/img_produtos/consoles/produto-4.jpg'), category: 'consoles' },
+    { name: "ProdutoXYZ", price: 60.00, image: require('../assets/img/img_produtos/consoles/produto-5.jpg'), category: 'consoles' },
+    { name: "ProdutoXYZ", price: 60.00, image: require('../assets/img/img_produtos/consoles/produto-6.jpg'), category: 'consoles' },
+]
+const productList3 = [
+    { name: "ProdutoXYZ", price: 60.00, image: require('../assets/img/img_produtos/diversos/produto-1.jpg'), category: 'diversos' },
+    { name: "ProdutoXYZ", price: 60.00, image: require('../assets/img/img_produtos/diversos/produto-2.jpg'), category: 'diversos' },
+    { name: "ProdutoXYZ", price: 60.00, image: require('../assets/img/img_produtos/diversos/produto-3.jpg'), category: 'diversos' },
+    { name: "ProdutoXYZ", price: 60.00, image: require('../assets/img/img_produtos/diversos/produto-4.jpg'), category: 'diversos' },
+    { name: "ProdutoXYZ", price: 60.00, image: require('../assets/img/img_produtos/diversos/produto-5.jpg'), category: 'diversos' },
+    { name: "ProdutoXYZ", price: 60.00, image: require('../assets/img/img_produtos/diversos/produto-6.jpg'), category: 'diversos' },
+]
+
+
+const options = [{ value: 'consoles', label: 'Consoles' }, { value: 'starwars', label: 'StarWars' }, { value: 'diversos', label: 'Diversos' }]
+
+export default class ProductFactory extends React.Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            name: '',
+            price: '',
+            image: '',
+            category: 'Select',
+            description: '',
+            id: uuidv4(),
+        };
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
-    
+    handleChange(event) {
+        console.log(event.target.value);
+
+        this.setState({
+            [event.target.name]: event.target.value
+
+        });
+
+    }
+
+
+    handleSubmit(event) {
+
+        if (this.state.category === 'starwars') {
+            productList1.concat(this.state)
+        }
+        if (this.state.category === 'consoles') {
+            productList2.concat(this.state)
+        }
+        if (this.state.category === 'diversos') {
+            productList3.concat(this.state)
+        }
+
+        alert('Produto Criado: ' + this.state.name)
+        event.preventDefault();
+        this.setState({
+            name: '',
+            image: '',
+            price: '',
+            description: '',
+        });
+
+    }
+
+
+    render() {
+        return (
+            <div className="addProduct">
+                <form className='addProduct__form' onSubmit={this.handleSubmit}>
+                    <h2 className='addProduct__form__title'>Adicionar novo produto</h2>
+                    <div className='addProduct__form__input'>
+                        <label for='image'>Url da Imagem</label>
+                        <input className='add__product__image' name='image' type='url' value={this.state.image} onChange={this.handleChange} />
+                        <label for='categoty'>Categoria</label>
+                        <select className='add__product__category' name='category' value={this.state.category} onChange={this.handleChange}>
+                            {options.map(option => (
+                                <option key={option.value} value={option.value}>
+                                    {option.label}
+                                </option>
+                            ))}
+
+                        </select>
+                        <label for='name'>Nome do Produto</label>
+                        <input className='add__product__name' name='name' type='text' value={this.state.name} onChange={this.handleChange} />
+                        <label for='price'>Preço</label>
+                        <input className='add__product__price' name='price' type='number' value={this.state.price} onChange={this.handleChange} />
+                        <textarea className='add__product__description' rows={5} placeholder='Escreva sua descrição' name='description' value={this.state.message} onChange={this.handleChange} />
+                    </div>
+                    <div className='login__form__submit'>
+                        <input className='login__input__submit' name='submit' type='submit' value='Enviar'></input>
+                    </div>
+                </form>
+            </div>
+        )
+    }
 }
 
 
-//adicionando produto a lista StarWars
-let product1Lista1 = new ProductFactory("ProdutoXYZ", 60.00, require('../assets/img/img_produtos/starwars/produto-1.jpg'))
-let product2Lista1 = new ProductFactory("ProdutoXYZ", 60.00, require('../assets/img/img_produtos/starwars/produto-2.jpg'))
-let product3Lista1 = new ProductFactory("ProdutoXYZ", 60.00, require('../assets/img/img_produtos/starwars/produto-3.jpg'))
-let product4Lista1 = new ProductFactory("ProdutoXYZ", 60.00, require('../assets/img/img_produtos/starwars/produto-4.jpg'))
-let product5Lista1 = new ProductFactory("ProdutoXYZ", 60.00, require('../assets/img/img_produtos/starwars/produto-5.jpg'))
-let product6Lista1 = new ProductFactory("ProdutoXYZ", 60.00, require('../assets/img/img_produtos/starwars/produto-6.jpg'))
 
-//adicionando produto a lista Console
-let product1Lista2 = new ProductFactory("ProdutoXYZ", 60.00, require('../assets/img/img_produtos/consoles/produto-1.jpg'))
-let product2Lista2 = new ProductFactory("ProdutoXYZ", 60.00, require('../assets/img/img_produtos/consoles/produto-2.jpg'))
-let product3Lista2 = new ProductFactory("ProdutoXYZ", 60.00, require('../assets/img/img_produtos/consoles/produto-3.jpg'))
-let product4Lista2 = new ProductFactory("ProdutoXYZ", 60.00, require('../assets/img/img_produtos/consoles/produto-4.jpg'))
-let product5Lista2 = new ProductFactory("ProdutoXYZ", 60.00, require('../assets/img/img_produtos/consoles/produto-5.jpg'))
-let product6Lista2 = new ProductFactory("ProdutoXYZ", 60.00, require('../assets/img/img_produtos/consoles/produto-6.jpg'))
 
-//adicionando produto a lista Diversos
-let product1Lista3 = new ProductFactory("ProdutoXYZ", 60.00, require('../assets/img/img_produtos/diversos/produto-1.jpg'))
-let product2Lista3 = new ProductFactory("ProdutoXYZ", 60.00, require('../assets/img/img_produtos/diversos/produto-2.jpg'))
-let product3Lista3 = new ProductFactory("ProdutoXYZ", 60.00, require('../assets/img/img_produtos/diversos/produto-3.jpg'))
-let product4Lista3 = new ProductFactory("ProdutoXYZ", 60.00, require('../assets/img/img_produtos/diversos/produto-4.jpg'))
-let product5Lista3 = new ProductFactory("ProdutoXYZ", 60.00, require('../assets/img/img_produtos/diversos/produto-5.jpg'))
-let product6Lista3 = new ProductFactory("ProdutoXYZ", 60.00, require('../assets/img/img_produtos/diversos/produto-6.jpg'))
 
 export const productSet = {
-    produtosLista1: [product1Lista1, product2Lista1, product3Lista1, product4Lista1, product5Lista1, product6Lista1],
-    produtosLista2: [product1Lista2, product2Lista2, product3Lista2, product4Lista2, product5Lista2, product6Lista2],
-    produtosLista3: [product1Lista3, product2Lista3, product3Lista3, product4Lista3, product5Lista3, product6Lista3],
-};
+    productList1, productList2, productList3
+}
+

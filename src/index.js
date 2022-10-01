@@ -6,10 +6,12 @@ import Content from './components/Content';
 import Footer from './components/Footer';
 import Login from './components/Login';
 import './index.css';
-import Factory from './components/testProduct';
+import AllProducts from './components/AllProducts';
 
 //componente Principal
 function App(props) {
+
+
     return (
         <BrowserRouter>
             <div className='app__container'>
@@ -17,9 +19,10 @@ function App(props) {
                 <Routes>
                 <Route exact path='/' element={<Content />}/>
                 <Route exact path='/Login' element={<Login />}/>
+                <Route exact path='/Produtos' element={<AllProducts />}/>
+                <Route exact path='/Adicionar' element={<Content/>}/>
                 </Routes>
                 <Footer />
-                <Factory />
             </div>
         </BrowserRouter> 
     );

@@ -1,0 +1,184 @@
+.products {
+    display: flex;
+    flex-direction: column;
+    width: 1136px;
+    font-family: 'Raleway';
+    font-style: normal;
+}
+
+.list__allproducts {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    gap: 16px;
+    height: 100%;
+}
+
+.list__allproducts__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+}
+
+.list__allproduto__title {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+    color: #464646;
+}
+
+.list__allproducts__button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    gap: 10px;
+    width: 164px;
+    height: 51px;
+    border: none;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: white;
+    background: #2A7AE4;
+    cursor: pointer;
+}
+
+.allproducts__container {
+    display: grid;
+    grid-template-columns: repeat(6, 174px);
+    justify-items: center;
+    gap: 16px;
+    padding: 0 0 32px 0;
+}
+
+.produto {
+    text-align: left;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    gap: 8px;
+}
+
+.produto__image {
+    height: 176px;
+    width: 174px;
+
+}
+
+.produto__name {
+    font-style: medium;
+    font-size: 14px;
+    line-height: 16px;
+    margin: 0;
+}
+
+.produto__price {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 16px;
+    margin: 0;
+}
+
+.produto__botao_ver {
+    display: none;
+}
+
+@media only screen and (max-width: 1260px) {
+
+    .products {
+        width: 768px;
+        gap: 16px;
+    }
+
+    .allproducts__container {
+
+        grid-template-columns: repeat(4, 164px);
+
+    }
+
+    .list__allproducts {
+        padding: 0px 32px;
+        gap: 16px;
+    }
+
+    .list__allproduto__title {
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 26px;
+    }
+
+
+    .list__allproducts__button {
+        padding: 12px 16px;
+        gap: 10px;
+        width: 151px;
+        height: 40px;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 16px;
+    }
+
+    .produto__image {
+        width: 164px;
+        height: 174px;
+
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+
+    .products {
+        width: 360px;
+    }
+
+    .list__allproducts {
+        padding: 16px;
+        gap: 16px;
+        width: 360px;
+    }
+
+    .list__allproducts__header {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 0px;
+        width: 328px;
+    }
+
+    .list__allproduto__title {
+        font-size: 22px;
+        line-height: 26px;
+    }
+
+
+    .list__allproducts__button {
+        padding: 12px 16px;
+        gap: 10px;
+        width: 151px;
+        height: 40px;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 16px;
+    }
+
+    .allproducts__container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 45%);
+        justify-items: center;
+        grid-gap: 8px;
+    }
+
+    .produto__image {
+        width: 156px;
+        height: 174px;
+    }
+
+}
