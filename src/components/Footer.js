@@ -4,12 +4,21 @@ import '../style/footer.css';
 
 
 //dados para o Rodapé
-let footerData = {
+const footerData = {
     logo: require('../assets/img/footer/Logo-Footer.png'),
+    links: [
+        {id: 'a', value: 'Quem somos nós'},
+        {id: 'b', value: 'Política de privacidade'},
+        {id: 'c', value: 'Programa fidelidade'},
+        {id: 'd', value: 'Nossas lojas'},
+        {id: 'e', value: 'Anuncie aqui'},
+    ]
 }
 
 //retorna o rodapé
 export default function Footer(props) {
+    const listItem = footerData.links.map((link) => <li className='footer__link' key={link.id}>{link.value}</li>)
+
     return (
         <footer className='footer'>
             <div className='footer__container'>
@@ -17,24 +26,7 @@ export default function Footer(props) {
                     <div className='footer__contact__guia'>
                         <img src={footerData.logo} alt="logo AluraGeek" />
                         <ul className='footer__list__links'>
-                            <li>
-                                <a className='footer__link'>Quem somos nós</a>
-                            </li>
-                            <li>
-                                <a className='footer__link'>Política de privacidade</a>
-                            </li>
-                            <li>
-                                <a className='footer__link'>Programa fidelidade</a>
-                            </li>
-                            <li>
-                                <a className='footer__link'>Nossas lojas</a>
-                            </li>
-                            <li>
-                                <a className='footer__link'>Quero ser franqueado</a>
-                            </li>
-                            <li>
-                                <a className='footer__link'>Anuncie aqui</a>
-                            </li>
+                          {listItem}
                         </ul>
                     </div>
                     <div>

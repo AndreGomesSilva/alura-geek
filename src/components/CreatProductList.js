@@ -5,6 +5,7 @@ import { useLocation } from 'react-router-dom';
 
 //retorna um elemento que representa o produto Card
 function ProdutoCard(props) {
+
     return (
         <div className='produto'>
             <img className='produto__image' src={props.produtos.image} alt="imagem produto1" />

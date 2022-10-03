@@ -7,6 +7,7 @@ import Footer from './components/Footer';
 import Login from './components/Login';
 import './index.css';
 import AllProducts from './components/AllProducts';
+import ProductFactory from './components/ProductFactory';
 
 //componente Principal
 function App(props) {
@@ -18,9 +19,9 @@ function App(props) {
                 <Header />
                 <Routes>
                 <Route exact path='/' element={<Content />}/>
-                <Route exact path='/Login' element={<Login />}/>
-                <Route exact path='/Produtos' element={<AllProducts />}/>
-                <Route exact path='/Adicionar' element={<Content/>}/>
+                <Route exact path='/login' element={<Login />}/>
+                <Route exact path='/produtos' element={<AllProducts />}/>
+                <Route exact path='/adicionar' element={<ProductFactory/>}/>
                 </Routes>
                 <Footer />
             </div>

@@ -14,7 +14,7 @@ export default function AllProducts() {
             <section className='list__allproducts'>
                 <div className='list__allproducts__header'>
                     <h2 className='list__allproduto__title'>Todos Produtos</h2>
-                    <Link to="/Adicionar" style={{ textDecoration: 'none' }} >
+                    <Link to="/adicionar" style={{ textDecoration: 'none' }} >
                         <button className='list__allproducts__button'>Adicionar produto</button>
                     </Link>
                 </div>

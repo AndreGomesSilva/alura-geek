@@ -85,7 +85,7 @@
     margin: 0;
 }
 
-.produto__botao_ver {
+.allproducts__container .produto__botao_ver {
     display: none;
 }
 

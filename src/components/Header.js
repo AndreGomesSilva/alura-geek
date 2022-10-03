@@ -29,7 +29,7 @@ export default function Header() {
                     </div>
                     {isHomePage ?  
                      <div className="cabecalho__botao">
-                        <Link to="/Login" style={{ textDecoration: 'none'}} >
+                        <Link to="/login" style={{ textDecoration: 'none'}} >
                             <button type="button" className="cabecalho__botao__login">Login</button>
                         </Link>
                     </div> 
