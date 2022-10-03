@@ -17,14 +17,14 @@ const headerData = {
 //retorna cabeçalho
 export default function Header() {
     const location = useLocation();
-    const isHomePage = location.pathname.match(/^\/$/);
+    const isHomePage = location.pathname.includes('/alura-geek');
     const isAddPage = location.pathname.includes('/adicionar')
     return (
         <header className='header'>
             <div className="topo">
                 <div className="topo__cabecalho">
                     <div className="cabecalho__direita">
-                        <Link to="/" style={{ textDecoration: 'none' }} >
+                        <Link to="/alura-geek" style={{ textDecoration: 'none' }} >
                             <img src={headerData.logo} alt="logo AluraGeek" />
                         </Link>
                         <img className='cabecalho__barra__pesquisa' src={headerData.BarraDePesquisa} alt="Barra de pesquisa" />
@@ -40,7 +40,7 @@ export default function Header() {
 
                     {isAddPage ?
                         <div className="cabecalho__botao">
-                            <Link to="/" style={{ textDecoration: 'none' }} >
+                            <Link to="/alura-geek" style={{ textDecoration: 'none' }} >
                                 <button type="button" className="cabecalho__botao__admin">Menu administrador</button>
                             </Link>
                         </div>

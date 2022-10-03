@@ -18,7 +18,7 @@ function App(props) {
             <div className='app__container'>
                 <Header />
                 <Routes>
-                <Route exact path='/' element={<Content />}/>
+                <Route exact path='/alura-geek' element={<Content />}/>
                 <Route exact path='/login' element={<Login />}/>
                 <Route exact path='/produtos' element={<AllProducts />}/>
                 <Route exact path='/adicionar' element={<ProductFactory/>}/>
