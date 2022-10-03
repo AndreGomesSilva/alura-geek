@@ -23,5 +23,7 @@ Para isso eles estão solicitando a nossa ajuda como desenvolvedores para criar 
 
 
 
+
 ##Confira o Resultado : 
-andregomessilva.github.io/alura-geek/
+
+https://andregomessilva.github.io/alura-geek/
