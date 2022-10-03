@@ -2,6 +2,11 @@
 
 Spring 02 Front-end do curos Alura Project One
 
+
+## Ferramentas usadas:
+React, JavaScript, HTML, CSS
+
+
 ## Premissas: 
 **História**
 
