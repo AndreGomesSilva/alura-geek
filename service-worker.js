@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/alura-geek/precache-manifest.e7a02df378f3239c3196b0b397c49a38.js"
+  "/alura-geek/precache-manifest.b2ea4a618bd69106b47990bb478e3281.js"
 );
 
 workbox.clientsClaim();

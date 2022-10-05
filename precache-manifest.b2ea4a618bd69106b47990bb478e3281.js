@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "f626a9fca33ec9d7d625",
-    "url": "/alura-geek/static/css/main.14d16204.chunk.css"
+    "revision": "9dde419e18419ee86297",
+    "url": "/alura-geek/static/css/main.44695359.chunk.css"
   },
   {
-    "revision": "f626a9fca33ec9d7d625",
-    "url": "/alura-geek/static/js/main.f626a9fc.chunk.js"
+    "revision": "9dde419e18419ee86297",
+    "url": "/alura-geek/static/js/main.9dde419e.chunk.js"
   },
   {
     "revision": "bbc98ac6a496cebb6bf4",
@@ -84,7 +84,7 @@ self.__precacheManifest = [
     "url": "/alura-geek/static/media/produto-6.02df3434.jpg"
   },
   {
-    "revision": "1a354f60b1b0be1ae6f1f42f16ee7449",
+    "revision": "d90cb96a709f2ed4f65e6467ad9ee9e8",
     "url": "/alura-geek/index.html"
   }
 ];
