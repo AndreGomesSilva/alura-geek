@@ -19,7 +19,7 @@ function ProdutoCard(props) {
 
 export default function CreatProductList(props) {
     const location = useLocation();
-    const isHomePage = location.pathname.match(/^\/$/);
+    const isHomePage = location.pathname.match('/alura-geek');
     const size = useWindowSize();
     let numberOfItem = 0
     const productSection = [];

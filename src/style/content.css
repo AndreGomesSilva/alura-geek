@@ -209,7 +209,7 @@
         padding: 16px;
         gap: 16px;
         width: 360px;
-        height: 588px
+        height: 100%;
     }
 
     .lista__produto__cabecalho {
